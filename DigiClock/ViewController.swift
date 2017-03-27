@@ -26,7 +26,8 @@ class ViewController: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.updateTimer), userInfo: nil, repeats: true)
         
-        settingsView.isHidden = true
+        settingsView.isHidden = true // here we are setting the settingsView to be hidden on load.
+        settingsButton.alpha = 0.40
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,9 +49,13 @@ class ViewController: UIViewController {
         
         if settingsView.isHidden == true {
             settingsView.isHidden = false
+            settingsButton.setTitle("Hide Settings", for: [])
+            settingsButton.alpha = 1.0
         } else {
             settingsView.isHidden = true
-        }
+            settingsButton.setTitle("Show Settings", for: [])
+            settingsButton.alpha = 0.40
+        } // here we are saying if the settingsView is hidden when the button is clicked to unhide it.
         
     }
     
