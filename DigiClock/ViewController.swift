@@ -14,6 +14,11 @@ class ViewController: UIViewController {
     
     var timer = Timer()
 
+    @IBOutlet var settingsView: UIView!
+    @IBOutlet var textColorSeg: UISegmentedControl!
+    @IBOutlet var backgroundColorSeg: UISegmentedControl!
+    @IBOutlet var settingButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,6 +38,24 @@ class ViewController: UIViewController {
         timerFormatter.timeStyle = .medium
         
         label.text = timerFormatter.string(from: Date())
+        
+    }
+    
+    @IBAction func settings(_ sender: Any) {
+        
+        
+        
+    }
+    
+    @IBAction func textColor(_ sender: Any) {
+        
+        
+        
+    }
+    
+    @IBAction func backgroundColor(_ sender: Any) {
+        
+        
         
     }
 
