@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -33,9 +34,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jx7-Rm-YXc">
-                                <rect key="frame" x="16" y="369" width="343" height="186"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUd-ce-xkt">
+                                <rect key="frame" x="16" y="613" width="343" height="34"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Show Settings"/>
+                            </button>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jx7-Rm-YXc">
+                                <rect key="frame" x="16" y="411" width="343" height="186"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ake-eF-rmJ">
                                         <rect key="frame" x="8" y="51" width="327" height="29"/>
@@ -48,13 +54,6 @@
                                         </segments>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOL-DR-95h">
-                                        <rect key="frame" x="8" y="8" width="327" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BackGround Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZN-8d-GNM">
                                         <rect key="frame" x="8" y="87" width="327" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -73,20 +72,32 @@
                                         </segments>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOL-DR-95h">
+                                        <rect key="frame" x="8" y="8" width="327" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="186" id="qmF-IX-RyM"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUd-ce-xkt">
-                                <rect key="frame" x="16" y="591" width="343" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="oUd-ce-xkt" firstAttribute="top" secondItem="jx7-Rm-YXc" secondAttribute="bottom" constant="16" id="4yN-LS-cdI"/>
                             <constraint firstItem="jHP-hk-Ghu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5an-aM-tBQ"/>
+                            <constraint firstItem="oUd-ce-xkt" firstAttribute="top" secondItem="jx7-Rm-YXc" secondAttribute="bottom" constant="16" id="5qh-Cr-I9b"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oUd-ce-xkt" secondAttribute="bottom" constant="20" id="H21-vy-EjQ"/>
+                            <constraint firstItem="jx7-Rm-YXc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="R36-ns-6gO"/>
+                            <constraint firstItem="oUd-ce-xkt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="RJD-6a-b3V"/>
+                            <constraint firstItem="oUd-ce-xkt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XX5-Hd-Igm"/>
                             <constraint firstAttribute="trailing" secondItem="jHP-hk-Ghu" secondAttribute="trailing" id="YAr-Qv-b7X"/>
                             <constraint firstItem="jHP-hk-Ghu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Z8F-aW-w87"/>
+                            <constraint firstItem="jx7-Rm-YXc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="d5w-YM-zf6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jHP-hk-Ghu" secondAttribute="bottom" id="lI4-dD-UIi"/>
                         </constraints>
                     </view>
