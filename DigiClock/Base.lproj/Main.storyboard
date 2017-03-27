@@ -113,7 +113,7 @@
                     <connections>
                         <outlet property="backgroundColorSeg" destination="fuC-3W-mh8" id="Kb5-aF-YQt"/>
                         <outlet property="label" destination="jHP-hk-Ghu" id="3Qr-ZY-Csa"/>
-                        <outlet property="settingButton" destination="oUd-ce-xkt" id="mq6-qe-vNf"/>
+                        <outlet property="settingsButton" destination="oUd-ce-xkt" id="8oH-5N-vOL"/>
                         <outlet property="settingsView" destination="jx7-Rm-YXc" id="9Dq-JS-EeW"/>
                         <outlet property="textColorSeg" destination="Ake-eF-rmJ" id="G3v-IF-Aba"/>
                     </connections>

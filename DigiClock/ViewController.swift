@@ -17,13 +17,16 @@ class ViewController: UIViewController {
     @IBOutlet var settingsView: UIView!
     @IBOutlet var textColorSeg: UISegmentedControl!
     @IBOutlet var backgroundColorSeg: UISegmentedControl!
-    @IBOutlet var settingButton: UIButton!
+    @IBOutlet var settingsButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.updateTimer), userInfo: nil, repeats: true)
+        
+        settingsView.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +46,11 @@ class ViewController: UIViewController {
     
     @IBAction func settings(_ sender: Any) {
         
-        
+        if settingsView.isHidden == true {
+            settingsView.isHidden = false
+        } else {
+            settingsView.isHidden = true
+        }
         
     }
     
