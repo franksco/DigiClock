@@ -30,6 +30,8 @@ class ViewController: UIViewController {
         settingsButton.alpha = 0.40
         
         label.alpha = 0
+        settingsView.layer.cornerRadius = 5
+        settingsButton.layer.cornerRadius = 5
     }
 
     override func didReceiveMemoryWarning() {
