@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         
         settingsView.isHidden = true // here we are setting the settingsView to be hidden on load.
         settingsButton.alpha = 0.40
+        
+        label.alpha = 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +45,9 @@ class ViewController: UIViewController {
         
         label.text = timerFormatter.string(from: Date())
         
-    }
+        label.alpha = 1.0
+        
+    } // here we are setting up our time format and telling it where to display
     
     @IBAction func settings(_ sender: Any) {
         
@@ -61,13 +65,41 @@ class ViewController: UIViewController {
     
     @IBAction func textColor(_ sender: Any) {
         
+        if (textColorSeg.selectedSegmentIndex == 0) {
+            label.textColor = UIColor.white
+        }
         
+        if (textColorSeg.selectedSegmentIndex == 1) {
+            label.textColor = UIColor.black
+        }
+        
+        if (textColorSeg.selectedSegmentIndex == 2) {
+            label.textColor = UIColor.red
+        }
+        
+        if (textColorSeg.selectedSegmentIndex == 3) {
+            label.textColor = UIColor.green
+        }
         
     }
     
     @IBAction func backgroundColor(_ sender: Any) {
         
+        if (backgroundColorSeg.selectedSegmentIndex == 0) {
+            label.backgroundColor = UIColor.black
+        }
         
+        if (backgroundColorSeg.selectedSegmentIndex == 1) {
+            label.backgroundColor = UIColor.white
+        }
+        
+        if (backgroundColorSeg.selectedSegmentIndex == 2) {
+            label.backgroundColor = UIColor.yellow
+        }
+        
+        if (backgroundColorSeg.selectedSegmentIndex == 3) {
+            label.backgroundColor = UIColor.orange
+        }
         
     }
 
